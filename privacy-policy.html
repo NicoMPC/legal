@@ -44,9 +44,9 @@
 <!-- ============ ENGLISH ============ -->
 <section class="lang-section active" data-lang="en">
 <h1>Privacy Policy</h1>
-<p class="subtitle">Applies to: <strong>OneClick</strong> (Tab Workflow &amp; Session Saver) and <strong>EasyRec</strong> (Camera Recorder)<br>
+<p class="subtitle">Applies to: <strong>OneClick</strong> (Tab Workflow &amp; Session Saver), <strong>EasyRec</strong> (Camera Recorder) and <strong>ClipStack</strong> (Clipboard Manager &amp; FIFO Queue)<br>
 Publisher: Nicolas Follezou — SIRET 83776371300059<br>
-Last updated: April 21, 2026</p>
+Last updated: April 22, 2026</p>
 
 <div class="notice">This policy complies with EU Regulation 2016/679 (GDPR) and French Law No. 78-17 of January 6, 1978 (Informatique et Libertés), as amended.</div>
 
@@ -57,7 +57,7 @@ Address: Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, France<br>
 Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Scope</h2>
-<p>This policy applies to all Chrome extensions published by Nicolas Follezou on the Chrome Web Store, including <strong>OneClick</strong> and <strong>EasyRec</strong>. Each extension is described separately where their data practices differ.</p>
+<p>This policy applies to all Chrome extensions published by Nicolas Follezou on the Chrome Web Store, including <strong>OneClick</strong>, <strong>EasyRec</strong> and <strong>ClipStack</strong>. Each extension is described separately where their data practices differ.</p>
 
 <h2>3. Data We Collect — and What We Do Not</h2>
 
@@ -68,16 +68,19 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <p>EasyRec stores recording preferences locally on your device via <code>chrome.storage.local</code>. Recordings (video, screen captures, photos) are processed entirely in your browser and saved locally via <code>chrome.downloads</code>. No recording content is ever uploaded to any server.</p>
 <p>EasyRec transmits <strong>anonymous, non-identifiable usage events</strong> (e.g. "recording started", "video exported") to Google Analytics 4 via the Measurement Protocol. These events contain no name, email address, IP address, or device identifier. The sole purpose is to understand feature usage and improve the extension.</p>
 
+<h3>3.3 ClipStack (Clipboard Manager &amp; FIFO Queue)</h3>
+<p><strong>We do not collect any personal data.</strong> ClipStack captures the text you explicitly copy (e.g., via Ctrl+C) to build your clipboard history. All data is stored exclusively on your device using <code>chrome.storage.local</code>. No clipboard data is ever transmitted to our servers or any third party.</p>
+
 <h2>4. Legal Basis for Processing (GDPR Art. 6)</h2>
 <table>
   <tr><th>Processing</th><th>Legal Basis</th></tr>
-  <tr><td>Local storage of preferences and workflows</td><td>Art. 6(1)(b) — Performance of a contract (provision of the extension's service)</td></tr>
+  <tr><td>Local storage of preferences and workflows (all extensions)</td><td>Art. 6(1)(b) — Performance of a contract (provision of the extension's service)</td></tr>
   <tr><td>Payment processing via Stripe/ExtensionPay</td><td>Art. 6(1)(b) — Performance of a contract</td></tr>
-  <tr><td>Anonymous analytics (EasyRec only)</td><td>Art. 6(1)(f) — Legitimate interest (improving extension quality, no impact on user rights)</td></tr>
+  <tr><td>Anonymous analytics (EasyRec only — ClipStack and OneClick do not use analytics)</td><td>Art. 6(1)(f) — Legitimate interest (improving extension quality, no impact on user rights)</td></tr>
 </table>
 
 <h2>5. Third-Party Services</h2>
-<p>Both extensions offer an optional paid Pro upgrade, processed by:</p>
+<p>All extensions offer an optional paid Pro upgrade, processed by:</p>
 <ul>
   <li><strong><a href="https://extensionpay.com" target="_blank">ExtensionPay</a></strong> — manages license activation and verification. Acts as a data processor on our behalf.</li>
   <li><strong><a href="https://stripe.com/privacy" target="_blank">Stripe, Inc.</a></strong> — processes payments. Your email address and payment information are collected and processed directly by Stripe under their own Privacy Policy. Stripe is based in the United States; transfers are covered by Standard Contractual Clauses (SCCs) under GDPR Art. 46.</li>
@@ -89,7 +92,7 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 
 <h2>6. Data Retention</h2>
 <ul>
-  <li><strong>Local extension data</strong> (workflows, settings, recordings): retained on your device until you uninstall the extension or clear its storage.</li>
+  <li><strong>Local extension data</strong> (workflows, settings, recordings, clipboard history): retained on your device until you uninstall the extension or clear its storage.</li>
   <li><strong>Payment data</strong>: retained by Stripe and ExtensionPay according to their own policies. We do not store payment card data.</li>
   <li><strong>Anonymous analytics</strong>: retained by Google Analytics for 14 months, then automatically deleted.</li>
 </ul>
@@ -123,6 +126,14 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
   <li><strong>downloads</strong> — save recordings to your device</li>
   <li><strong>host_permissions (extensionpay.com)</strong> — license verification only</li>
 </ul>
+<h3>ClipStack</h3>
+<ul>
+  <li><strong>storage</strong> — save clipboard history, queue, and presets locally</li>
+  <li><strong>clipboardWrite</strong> — write selected text back to your system clipboard</li>
+  <li><strong>sidePanel</strong> — display the extension interface alongside your web pages</li>
+  <li><strong>content scripts / &lt;all_urls&gt;</strong> — detect copy and paste keyboard events across the websites you visit to power the history and queue features. The extension does not read your general browsing data.</li>
+  <li><strong>host_permissions (extensionpay.com)</strong> — license verification for the Pro version</li>
+</ul>
 <p>No permission is used to collect or transmit personal data to our servers.</p>
 
 <h2>9. Updates to This Policy</h2>
@@ -139,9 +150,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <!-- ============ FRANÇAIS ============ -->
 <section class="lang-section" data-lang="fr">
 <h1>Politique de Confidentialité</h1>
-<p class="subtitle">Applicable à : <strong>OneClick</strong> (Workflows d'onglets) et <strong>EasyRec</strong> (Enregistreur webcam)<br>
+<p class="subtitle">Applicable à : <strong>OneClick</strong> (Workflows d'onglets), <strong>EasyRec</strong> (Enregistreur webcam) et <strong>ClipStack</strong> (Presse-papiers &amp; File d'attente)<br>
 Éditeur : Nicolas Follezou — SIRET 83776371300059<br>
-Dernière mise à jour : 21 avril 2026</p>
+Dernière mise à jour : 22 avril 2026</p>
 
 <div class="notice">Cette politique est conforme au Règlement (UE) 2016/679 (RGPD) et à la Loi Informatique et Libertés n°78-17 du 6 janvier 1978 modifiée.</div>
 
@@ -152,7 +163,7 @@ Adresse : Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, France<br>
 Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Champ d'application</h2>
-<p>Cette politique s'applique à toutes les extensions Chrome publiées par Nicolas Follezou, dont <strong>OneClick</strong> et <strong>EasyRec</strong>. Les pratiques propres à chaque extension sont décrites séparément.</p>
+<p>Cette politique s'applique à toutes les extensions Chrome publiées par Nicolas Follezou, dont <strong>OneClick</strong>, <strong>EasyRec</strong> et <strong>ClipStack</strong>. Les pratiques propres à chaque extension sont décrites séparément.</p>
 
 <h2>3. Données collectées</h2>
 
@@ -163,16 +174,19 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <p>EasyRec stocke vos préférences d'enregistrement localement via <code>chrome.storage.local</code>. Les enregistrements (vidéos, captures, photos) sont traités entièrement dans votre navigateur et sauvegardés localement via <code>chrome.downloads</code>. Aucun contenu n'est jamais transmis à un serveur.</p>
 <p>EasyRec envoie des <strong>événements d'usage anonymes et non identifiants</strong> (ex. : « enregistrement démarré », « vidéo exportée ») à Google Analytics 4 via le Measurement Protocol. Ces événements ne contiennent ni nom, ni adresse email, ni adresse IP, ni identifiant d'appareil. Leur seule finalité est de comprendre l'utilisation des fonctionnalités et d'améliorer l'extension.</p>
 
+<h3>3.3 ClipStack (Presse-papiers &amp; File d'attente)</h3>
+<p><strong>Aucune donnée personnelle n'est collectée.</strong> ClipStack capture le texte que vous copiez explicitement (ex: Ctrl+C) pour construire votre historique. Toutes les données sont stockées exclusivement sur votre appareil via <code>chrome.storage.local</code>. Aucune donnée du presse-papiers n'est jamais transmise à nos serveurs ou à des tiers.</p>
+
 <h2>4. Base légale des traitements (Art. 6 RGPD)</h2>
 <table>
   <tr><th>Traitement</th><th>Base légale</th></tr>
-  <tr><td>Stockage local des préférences et workflows</td><td>Art. 6(1)(b) — Exécution du contrat (fourniture du service)</td></tr>
+  <tr><td>Stockage local des préférences et workflows (toutes extensions)</td><td>Art. 6(1)(b) — Exécution du contrat (fourniture du service)</td></tr>
   <tr><td>Traitement des paiements via Stripe/ExtensionPay</td><td>Art. 6(1)(b) — Exécution du contrat</td></tr>
-  <tr><td>Analytics anonymes (EasyRec uniquement)</td><td>Art. 6(1)(f) — Intérêt légitime (amélioration de l'extension, sans impact sur vos droits)</td></tr>
+  <tr><td>Analytics anonymes (EasyRec uniquement — ClipStack et OneClick n'utilisent pas d'analytics)</td><td>Art. 6(1)(f) — Intérêt légitime (amélioration de l'extension, sans impact sur vos droits)</td></tr>
 </table>
 
 <h2>5. Sous-traitants et tiers</h2>
-<p>Les deux extensions proposent une option Pro payante, traitée par :</p>
+<p>Toutes les extensions proposent une option Pro payante, traitée par :</p>
 <ul>
   <li><strong><a href="https://extensionpay.com" target="_blank">ExtensionPay</a></strong> — gestion des licences. Agit en tant que sous-traitant au sens du RGPD.</li>
   <li><strong><a href="https://stripe.com/fr/privacy" target="_blank">Stripe, Inc.</a></strong> — traitement des paiements. Votre adresse email et vos données de paiement sont collectées directement par Stripe. Stripe est basé aux États-Unis ; les transferts sont encadrés par des Clauses Contractuelles Types (CCT) conformément à l'Art. 46 RGPD.</li>
@@ -184,7 +198,7 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 
 <h2>6. Durée de conservation</h2>
 <ul>
-  <li><strong>Données locales</strong> (workflows, paramètres, enregistrements) : conservées sur votre appareil jusqu'à désinstallation de l'extension.</li>
+  <li><strong>Données locales</strong> (workflows, paramètres, enregistrements, historique du presse-papiers) : conservées sur votre appareil jusqu'à désinstallation de l'extension.</li>
   <li><strong>Données de paiement</strong> : conservées par Stripe et ExtensionPay selon leurs propres politiques. Nous ne stockons aucune donnée bancaire.</li>
   <li><strong>Analytics anonymes</strong> : conservés 14 mois par Google Analytics, puis supprimés automatiquement.</li>
 </ul>
@@ -218,6 +232,14 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
   <li><strong>downloads</strong> — enregistrement des fichiers sur votre appareil</li>
   <li><strong>host_permissions (extensionpay.com)</strong> — vérification de licence uniquement</li>
 </ul>
+<h3>ClipStack</h3>
+<ul>
+  <li><strong>storage</strong> — sauvegarde locale de l'historique, de la file d'attente et des presets</li>
+  <li><strong>clipboardWrite</strong> — réécriture du texte sélectionné dans le presse-papiers système</li>
+  <li><strong>sidePanel</strong> — affichage de l'interface dans le panneau latéral du navigateur</li>
+  <li><strong>content scripts / &lt;all_urls&gt;</strong> — détection des événements de copie/collage au clavier sur les sites visités pour alimenter l'historique et la file d'attente. L'extension ne lit pas vos données de navigation générales.</li>
+  <li><strong>host_permissions (extensionpay.com)</strong> — vérification de la licence Pro</li>
+</ul>
 <p>Aucune permission n'est utilisée pour collecter ou transmettre des données personnelles vers nos serveurs.</p>
 
 <h2>9. Modifications de cette politique</h2>
@@ -234,9 +256,9 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <!-- ============ ESPAÑOL ============ -->
 <section class="lang-section" data-lang="es">
 <h1>Política de Privacidad</h1>
-<p class="subtitle">Aplicable a: <strong>OneClick</strong> y <strong>EasyRec</strong><br>
+<p class="subtitle">Aplicable a: <strong>OneClick</strong>, <strong>EasyRec</strong> y <strong>ClipStack</strong><br>
 Editor: Nicolas Follezou — SIRET 83776371300059<br>
-Última actualización: 21 de abril de 2026</p>
+Última actualización: 22 de abril de 2026</p>
 
 <div class="notice">Esta política cumple con el Reglamento (UE) 2016/679 (RGPD) y la legislación francesa de protección de datos.</div>
 
@@ -250,6 +272,8 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <p><strong>No recopilamos datos personales.</strong> Todos tus flujos de trabajo y preferencias se almacenan localmente en tu dispositivo mediante <code>chrome.storage.local</code> y nunca se transmiten a ningún servidor.</p>
 <h3>EasyRec</h3>
 <p>Las grabaciones se procesan íntegramente en tu navegador y se guardan localmente. EasyRec envía eventos de uso <strong>anónimos y no identificables</strong> a Google Analytics 4 (sin nombre, email, IP ni identificador de dispositivo).</p>
+<h3>ClipStack</h3>
+<p><strong>No recopilamos datos personales.</strong> El historial del portapapeles se almacena exclusivamente en tu dispositivo (local storage) y nunca se transmite a servidores externos.</p>
 
 <h2>3. Base legal (Art. 6 RGPD)</h2>
 <ul>
@@ -272,9 +296,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <!-- ============ DEUTSCH ============ -->
 <section class="lang-section" data-lang="de">
 <h1>Datenschutzerklärung</h1>
-<p class="subtitle">Gilt für: <strong>OneClick</strong> und <strong>EasyRec</strong><br>
+<p class="subtitle">Gilt für: <strong>OneClick</strong>, <strong>EasyRec</strong> und <strong>ClipStack</strong><br>
 Herausgeber: Nicolas Follezou — SIRET 83776371300059<br>
-Zuletzt aktualisiert: 21. April 2026</p>
+Zuletzt aktualisiert: 22. April 2026</p>
 
 <div class="notice">Diese Erklärung entspricht der EU-Verordnung 2016/679 (DSGVO) und dem französischen Datenschutzgesetz.</div>
 
@@ -288,6 +312,8 @@ E-Mail: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <p><strong>Wir erheben keine personenbezogenen Daten.</strong> Alle Workflows und Einstellungen werden ausschließlich lokal auf deinem Gerät via <code>chrome.storage.local</code> gespeichert und niemals übertragen.</p>
 <h3>EasyRec</h3>
 <p>Aufzeichnungen werden vollständig lokal verarbeitet und gespeichert. EasyRec sendet <strong>anonyme, nicht identifizierbare Nutzungsereignisse</strong> an Google Analytics 4 (kein Name, keine E-Mail, keine IP-Adresse).</p>
+<h3>ClipStack</h3>
+<p><strong>Wir erheben keine personenbezogenen Daten.</strong> Der Verlauf der Zwischenablage wird ausschließlich lokal auf deinem Gerät gespeichert und niemals an externe Server übertragen.</p>
 
 <h2>3. Rechtsgrundlage (Art. 6 DSGVO)</h2>
 <ul>
@@ -310,9 +336,9 @@ E-Mail: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <!-- ============ PORTUGUÊS ============ -->
 <section class="lang-section" data-lang="pt">
 <h1>Política de Privacidade</h1>
-<p class="subtitle">Aplicável a: <strong>OneClick</strong> e <strong>EasyRec</strong><br>
+<p class="subtitle">Aplicável a: <strong>OneClick</strong>, <strong>EasyRec</strong> e <strong>ClipStack</strong><br>
 Editor: Nicolas Follezou — SIRET 83776371300059<br>
-Última atualização: 21 de abril de 2026</p>
+Última atualização: 22 de abril de 2026</p>
 
 <div class="notice">Esta política está em conformidade com o Regulamento (UE) 2016/679 (RGPD) e a legislação francesa de proteção de dados.</div>
 
@@ -326,6 +352,8 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <p><strong>Não recolhemos dados pessoais.</strong> Todos os fluxos de trabalho e preferências são armazenados localmente no seu dispositivo via <code>chrome.storage.local</code> e nunca são transmitidos a qualquer servidor.</p>
 <h3>EasyRec</h3>
 <p>As gravações são processadas inteiramente no seu navegador e guardadas localmente. O EasyRec envia eventos de utilização <strong>anónimos e não identificáveis</strong> para o Google Analytics 4 (sem nome, email, IP ou identificador de dispositivo).</p>
+<h3>ClipStack</h3>
+<p><strong>Não recolhemos dados pessoais.</strong> O histórico da área de transferência é armazenado exclusivamente no seu dispositivo (local storage) e nunca é transmitido para servidores externos.</p>
 
 <h2>3. Base legal (Art. 6.º RGPD)</h2>
 <ul>
