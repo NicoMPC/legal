@@ -44,9 +44,9 @@
 <!-- ============ ENGLISH ============ -->
 <section class="lang-section active" data-lang="en">
 <h1>Privacy Policy</h1>
-<p class="subtitle">Applies to: <strong>OneClick</strong> (Tab Workflow &amp; Session Saver), <strong>EasyRec</strong> (Camera Recorder) and <strong>ClipStack</strong> (Clipboard Manager &amp; FIFO Queue)<br>
+<p class="subtitle">Applies to: <strong>OneClick</strong> (Tab Workflow &amp; Session Saver), <strong>EasyRec</strong> (Camera Recorder), <strong>ClipStack</strong> (Clipboard Manager &amp; FIFO Queue) and <strong>Kitty Lock</strong> (Social Media Blocker)<br>
 Publisher: Nicolas Follezou — SIRET 83776371300059<br>
-Last updated: May 3, 2026</p>
+Last updated: September 29, 2026</p>
 
 <div class="notice">This policy complies with EU Regulation 2016/679 (GDPR) and French Law No. 78-17 of January 6, 1978 (Informatique et Libertés), as amended.</div>
 
@@ -57,7 +57,7 @@ Address: Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, France<br>
 Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Scope</h2>
-<p>This policy applies to all Chrome extensions published by Nicolas Follezou on the Chrome Web Store, including <strong>OneClick</strong>, <strong>EasyRec</strong> and <strong>ClipStack</strong>. Each extension is described separately where their data practices differ.</p>
+<p>This policy applies to all Chrome extensions published by Nicolas Follezou on the Chrome Web Store, including <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> and <strong>Kitty Lock</strong>. Each extension is described separately where their data practices differ.</p>
 
 <h2>3. Data We Collect — and What We Do Not</h2>
 
@@ -71,6 +71,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 
 <h3>3.3 ClipStack (Clipboard Manager &amp; FIFO Queue)</h3>
 <p><strong>We do not collect any personal data.</strong> ClipStack captures the text you explicitly copy (e.g., via Ctrl+C) to build your clipboard history. All data is stored exclusively on your device using <code>chrome.storage.local</code>. No clipboard data is ever transmitted to our servers or any third party.</p>
+
+<h3>3.4 Kitty Lock (Social Media Blocker)</h3>
+<p><strong>We do not collect any personal data.</strong> Kitty Lock stores your settings (time slots, blocked sites), your virtual cat and its "graveyard" exclusively on your device using <code>chrome.storage.local</code>. To block a site, the extension only compares the domain of the page being opened with your block list; it never reads page content, never records your browsing history and sends nothing to our servers. Kitty Lock uses no analytics.</p>
 
 <h2>4. Legal Basis for Processing (GDPR Art. 6)</h2>
 <table>
@@ -135,6 +138,14 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
   <li><strong>content scripts / &lt;all_urls&gt;</strong> — detect copy and paste keyboard events across the websites you visit to power the history and queue features. The extension does not read your general browsing data.</li>
   <li><strong>host_permissions (extensionpay.com)</strong> — license verification for the Pro version</li>
 </ul>
+<h3>Kitty Lock</h3>
+<ul>
+  <li><strong>storage</strong> — save your settings, your cat and its graveyard locally</li>
+  <li><strong>declarativeNetRequest + host access (&lt;all_urls&gt;)</strong> — redirect the sites you chose to block to the extension's own page, only during your time slots. Host access is required by Chrome for redirect rules and lets you block any custom site. Page content is never read.</li>
+  <li><strong>tabs</strong> — intercept tabs already open on a blocked site when a time slot starts, and open the extension's own pages</li>
+  <li><strong>alarms</strong> — start and stop blocking on time and end temporary pauses</li>
+  <li><strong>content script (extensionpay.com)</strong> — confirm the Pro purchase after checkout</li>
+</ul>
 <p>No permission is used to collect or transmit personal data to our servers.</p>
 
 <h2>9. Updates to This Policy</h2>
@@ -151,9 +162,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <!-- ============ FRANÇAIS ============ -->
 <section class="lang-section" data-lang="fr">
 <h1>Politique de Confidentialité</h1>
-<p class="subtitle">Applicable à : <strong>OneClick</strong> (Workflows d'onglets), <strong>EasyRec</strong> (Enregistreur webcam) et <strong>ClipStack</strong> (Presse-papiers &amp; File d'attente)<br>
+<p class="subtitle">Applicable à : <strong>OneClick</strong> (Workflows d'onglets), <strong>EasyRec</strong> (Enregistreur webcam), <strong>ClipStack</strong> (Presse-papiers &amp; File d'attente) et <strong>Kitty Lock</strong> (Bloqueur de réseaux sociaux)<br>
 Éditeur : Nicolas Follezou — SIRET 83776371300059<br>
-Dernière mise à jour : 3 mai 2026</p>
+Dernière mise à jour : 29 septembre 2026</p>
 
 <div class="notice">Cette politique est conforme au Règlement (UE) 2016/679 (RGPD) et à la Loi Informatique et Libertés n°78-17 du 6 janvier 1978 modifiée.</div>
 
@@ -164,7 +175,7 @@ Adresse : Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, France<br>
 Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Champ d'application</h2>
-<p>Cette politique s'applique à toutes les extensions Chrome publiées par Nicolas Follezou, dont <strong>OneClick</strong>, <strong>EasyRec</strong> et <strong>ClipStack</strong>. Les pratiques propres à chaque extension sont décrites séparément.</p>
+<p>Cette politique s'applique à toutes les extensions Chrome publiées par Nicolas Follezou, dont <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> et <strong>Kitty Lock</strong>. Les pratiques propres à chaque extension sont décrites séparément.</p>
 
 <h2>3. Données collectées</h2>
 
@@ -178,6 +189,9 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 
 <h3>3.3 ClipStack (Presse-papiers &amp; File d'attente)</h3>
 <p><strong>Aucune donnée personnelle n'est collectée.</strong> ClipStack capture le texte que vous copiez explicitement (ex: Ctrl+C) pour construire votre historique. Toutes les données sont stockées exclusivement sur votre appareil via <code>chrome.storage.local</code>. Aucune donnée du presse-papiers n'est jamais transmise à nos serveurs ou à des tiers.</p>
+
+<h3>3.4 Kitty Lock (Bloqueur de réseaux sociaux)</h3>
+<p><strong>Aucune donnée personnelle n'est collectée.</strong> Kitty Lock stocke vos réglages (plages horaires, sites bloqués), votre chat virtuel et son « cimetière » exclusivement sur votre appareil via <code>chrome.storage.local</code>. Pour bloquer un site, l'extension compare uniquement le domaine de la page ouverte à votre liste ; elle ne lit jamais le contenu des pages, n'enregistre pas votre historique et n'envoie rien à nos serveurs. Kitty Lock n'utilise aucun outil d'analytics.</p>
 
 <h2>4. Base légale des traitements (Art. 6 RGPD)</h2>
 <table>
@@ -242,6 +256,14 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
   <li><strong>content scripts / &lt;all_urls&gt;</strong> — détection des événements de copie/collage au clavier sur les sites visités pour alimenter l'historique et la file d'attente. L'extension ne lit pas vos données de navigation générales.</li>
   <li><strong>host_permissions (extensionpay.com)</strong> — vérification de la licence Pro</li>
 </ul>
+<h3>Kitty Lock</h3>
+<ul>
+  <li><strong>storage</strong> — sauvegarde locale de vos réglages, de votre chat et de son cimetière</li>
+  <li><strong>declarativeNetRequest + accès aux sites (&lt;all_urls&gt;)</strong> — redirection des sites que vous avez choisi de bloquer vers la page de l'extension, uniquement pendant vos plages horaires. L'accès aux sites est exigé par Chrome pour les règles de redirection et permet de bloquer n'importe quel site ajouté. Le contenu des pages n'est jamais lu.</li>
+  <li><strong>tabs</strong> — interception des onglets déjà ouverts sur un site bloqué au début d'une plage, ouverture des pages de l'extension</li>
+  <li><strong>alarms</strong> — début et fin du blocage à l'heure, fin des pauses temporaires</li>
+  <li><strong>content script (extensionpay.com)</strong> — confirmation de l'achat Pro après paiement</li>
+</ul>
 <p>Aucune permission n'est utilisée pour collecter ou transmettre des données personnelles vers nos serveurs.</p>
 
 <h2>9. Modifications de cette politique</h2>
@@ -258,9 +280,9 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <!-- ============ ESPAÑOL ============ -->
 <section class="lang-section" data-lang="es">
 <h1>Política de Privacidad</h1>
-<p class="subtitle">Aplicable a: <strong>OneClick</strong>, <strong>EasyRec</strong> y <strong>ClipStack</strong><br>
+<p class="subtitle">Aplicable a: <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> y <strong>Kitty Lock</strong><br>
 Editor: Nicolas Follezou — SIRET 83776371300059<br>
-Última actualización: 3 de mayo de 2026</p>
+Última actualización: 29 de septiembre de 2026</p>
 
 <div class="notice">Esta política cumple con el Reglamento (UE) 2016/679 (RGPD) y la legislación francesa de protección de datos.</div>
 
@@ -276,6 +298,12 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <p>Las grabaciones se procesan íntegramente en tu navegador y se guardan localmente. EasyRec envía eventos de uso <strong>anónimos y no identificables</strong> a <strong>Plausible Analytics</strong>, una plataforma privacy-first con sede en la Unión Europea (Alemania). Plausible no usa cookies ni almacena ninguna información personal identificable. Las direcciones IP se hashean y rotan cada 24 horas únicamente para prevenir spam, y nunca se conservan.</p>
 <h3>ClipStack</h3>
 <p><strong>No recopilamos datos personales.</strong> El historial del portapapeles se almacena exclusivamente en tu dispositivo (local storage) y nunca se transmite a servidores externos.</p>
+<h3>Kitty Lock</h3>
+<p><strong>Não recolhemos dados pessoais.</strong> As suas definições (horários, sites bloqueados) e o seu gato virtual são armazenados exclusivamente no seu dispositivo. A extensão apenas compara o domínio da página aberta com a sua lista de bloqueio; nunca lê o conteúdo das páginas nem envia dados para servidores externos. Sem analytics.</p>
+<h3>Kitty Lock</h3>
+<p><strong>Wir erheben keine personenbezogenen Daten.</strong> Ihre Einstellungen (Zeitfenster, gesperrte Websites) und Ihre virtuelle Katze werden ausschließlich lokal auf Ihrem Gerät gespeichert. Die Erweiterung vergleicht nur die Domain der geöffneten Seite mit Ihrer Sperrliste; sie liest niemals Seiteninhalte und überträgt keine Daten an externe Server. Keine Analytics.</p>
+<h3>Kitty Lock</h3>
+<p><strong>No recopilamos datos personales.</strong> Tus ajustes (franjas horarias, sitios bloqueados) y tu gato virtual se almacenan exclusivamente en tu dispositivo. La extensión solo compara el dominio de la página abierta con tu lista de bloqueo; nunca lee el contenido de las páginas ni envía datos a servidores externos. Sin analytics.</p>
 
 <h2>3. Base legal (Art. 6 RGPD)</h2>
 <ul>
@@ -298,9 +326,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <!-- ============ DEUTSCH ============ -->
 <section class="lang-section" data-lang="de">
 <h1>Datenschutzerklärung</h1>
-<p class="subtitle">Gilt für: <strong>OneClick</strong>, <strong>EasyRec</strong> und <strong>ClipStack</strong><br>
+<p class="subtitle">Gilt für: <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> und <strong>Kitty Lock</strong><br>
 Herausgeber: Nicolas Follezou — SIRET 83776371300059<br>
-Zuletzt aktualisiert: 3. Mai 2026</p>
+Zuletzt aktualisiert: 29. September 2026</p>
 
 <div class="notice">Diese Erklärung entspricht der EU-Verordnung 2016/679 (DSGVO) und dem französischen Datenschutzgesetz.</div>
 
@@ -338,9 +366,9 @@ E-Mail: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <!-- ============ PORTUGUÊS ============ -->
 <section class="lang-section" data-lang="pt">
 <h1>Política de Privacidade</h1>
-<p class="subtitle">Aplicável a: <strong>OneClick</strong>, <strong>EasyRec</strong> e <strong>ClipStack</strong><br>
+<p class="subtitle">Aplicável a: <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> e <strong>Kitty Lock</strong><br>
 Editor: Nicolas Follezou — SIRET 83776371300059<br>
-Última atualização: 3 de maio de 2026</p>
+Última atualização: 29 de setembro de 2026</p>
 
 <div class="notice">Esta política está em conformidade com o Regulamento (UE) 2016/679 (RGPD) e a legislação francesa de proteção de dados.</div>
 
