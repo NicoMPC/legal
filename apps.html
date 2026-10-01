@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas's Extensions</title>
+  <meta name="description" content="EasyRec, TabZero and Kitty Lock: three small, 100% local Chrome extensions made by one indie developer.">
+  <meta name="robots" content="index, follow">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #5f6368;
+      --line: #e4e4e0;
+      --accent: #2f6fed;
+      --accent-text: #ffffff;
+      --soft: #eef3fe;
+      --warm: #fff6e8;
+      --warm-line: #f3d9a9;
+      --pill: #f1f1ee;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 6px 20px rgba(0,0,0,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141416;
+        --card: #1e1e21;
+        --text: #ececee;
+        --muted: #a1a1a8;
+        --line: #2e2e33;
+        --accent: #6b9bff;
+        --accent-text: #0d1117;
+        --soft: #1c2436;
+        --warm: #2a2317;
+        --warm-line: #5a4523;
+        --pill: #29292e;
+        --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 28px 16px 48px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+    .brand { font-weight: 650; font-size: 1rem; letter-spacing: -.01em; }
+    .brand span { color: var(--muted); font-weight: 400; }
+    .lang {
+      border: 1px solid var(--line); background: var(--card); color: var(--text);
+      border-radius: 999px; padding: 6px 14px; font-size: .85rem; cursor: pointer; font-family: inherit;
+    }
+    .lang:hover { border-color: var(--accent); }
+    h1 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); line-height: 1.2; letter-spacing: -.02em; margin-bottom: 10px; }
+    .lead { color: var(--muted); font-size: 1.02rem; max-width: 620px; margin-bottom: 28px; }
+    .notice {
+      border-radius: 14px; padding: 18px 20px; margin-bottom: 28px;
+      background: var(--soft); border: 1px solid var(--line);
+    }
+    .notice.bye { background: var(--warm); border-color: var(--warm-line); }
+    .notice h2 { font-size: 1.12rem; margin-bottom: 6px; }
+    .notice p { color: var(--text); opacity: .9; margin-bottom: 12px; }
+    .notice p:last-child { margin-bottom: 0; }
+    .btn-line {
+      display: inline-block; text-decoration: none; color: var(--text);
+      border: 1px solid var(--line); background: var(--card);
+      padding: 8px 14px; border-radius: 10px; font-weight: 600; font-size: .92rem;
+    }
+    .btn-line:hover { border-color: var(--accent); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 22px; box-shadow: var(--shadow);
+      display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: start;
+    }
+    .card.dim { opacity: .62; }
+    .card img { width: 64px; height: 64px; border-radius: 14px; display: block; }
+    .card h3 { font-size: 1.15rem; letter-spacing: -.01em; }
+    .tag { color: var(--muted); font-size: .9rem; margin-bottom: 8px; }
+    .pitch { margin-bottom: 12px; }
+    .plans { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .pill { background: var(--pill); border-radius: 999px; padding: 4px 11px; font-size: .82rem; }
+    .pill b { font-weight: 650; }
+    .cta {
+      display: inline-block; text-decoration: none; background: var(--accent); color: var(--accent-text);
+      font-weight: 650; font-size: .95rem; padding: 10px 18px; border-radius: 10px;
+    }
+    .cta:hover { filter: brightness(1.07); }
+    .left-note { font-size: .85rem; color: var(--muted); margin-top: 10px; }
+    .section-title { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 8px 0 12px; }
+    .promise { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+    .promise ul { list-style: none; display: grid; gap: 6px; }
+    footer { margin-top: 32px; font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+    @media (min-width: 720px) {
+      .card { grid-template-columns: 80px 1fr; padding: 26px; }
+      .card img { width: 80px; height: 80px; border-radius: 18px; }
+    }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Nicolas F. <span data-i18n="byline">· indie extensions</span></div>
+    <button class="lang" id="langBtn" type="button" aria-label="Switch language">FR</button>
+  </header>
+
+  <div id="notice" hidden></div>
+
+  <h1 id="title" data-i18n="title">Three small extensions, made by one person.</h1>
+  <p class="lead" id="lead" data-i18n="lead">No account, no cloud: everything stays on your computer. Each one is free to use, with an optional Pro upgrade that stays honest about what it adds.</p>
+
+  <div class="section-title" id="featuredTitle" hidden></div>
+  <div class="grid" id="grid"></div>
+
+  <div class="promise">
+    <ul>
+      <li data-i18n="p1">🔒 100% local: your data stays on your device.</li>
+      <li data-i18n="p2">🚫 No ads, no account, no reselling of anything.</li>
+      <li data-i18n="p3">✉️ A real human answers: nicolas.follezou@hotmail.fr</li>
+    </ul>
+  </div>
+
+  <footer>
+    <span>© 2026 Nicolas Follezou</span>
+    <a href="privacy-policy.html" data-i18n="privacy">Privacy policy</a>
+    <a href="terms.html" data-i18n="terms">Terms of sale &amp; legal notice</a>
+    <a href="mailto:nicolas.follezou@hotmail.fr" data-i18n="contact">Contact</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var MAIL = 'nicolas.follezou@hotmail.fr';
+  var STORE = 'https://chromewebstore.google.com/detail/';
+
+  var APPS = {
+    easyrec: {
+      name: 'EasyRec', icon: 'icons/easyrec.png', id: 'ggiedhiplloegpcbonoafcplailcgali',
+      en: {
+        tag: 'Screen & webcam recorder',
+        pitch: 'Record your screen, your webcam or both, then trim and export to video or GIF in a built-in studio. No watermark, nothing uploaded.',
+        free: 'Free: every feature, full quality, 3 min per recording',
+        pro: 'Pro: unlimited length, €9.99 lifetime or €2.99/month'
+      },
+      fr: {
+        tag: 'Enregistreur d’écran et webcam',
+        pitch: 'Enregistre ton écran, ta webcam ou les deux, puis coupe et exporte en vidéo ou en GIF dans un studio intégré. Sans filigrane, rien n’est envoyé en ligne.',
+        free: 'Gratuit : toutes les fonctions, pleine qualité, 3 min par enregistrement',
+        pro: 'Pro : durée illimitée, 9,99 € à vie ou 2,99 €/mois'
+      }
+    },
+    tabzero: {
+      name: 'TabZero', icon: 'icons/tabzero.png', id: 'mfoiihpjhdgdcdaipniankcdbpckkgjm',
+      en: {
+        tag: 'Tab workflows & session saver',
+        pitch: 'Save your open tabs as a named workflow and reopen them all in one click. Ctrl+Shift+S to save, side panel, JSON export and import.',
+        free: 'Free: every feature, 3 saved workflows',
+        pro: 'Pro: unlimited workflows, €4.99 lifetime'
+      },
+      fr: {
+        tag: 'Workflows d’onglets et sessions',
+        pitch: 'Sauvegarde tes onglets ouverts en workflow nommé et rouvre-les tous en un clic. Ctrl+Maj+S pour sauvegarder, panneau latéral, export et import JSON.',
+        free: 'Gratuit : toutes les fonctions, 3 workflows sauvegardés',
+        pro: 'Pro : workflows illimités, 4,99 € à vie'
+      }
+    },
+    kittylock: {
+      name: 'Kitty Lock', icon: 'icons/kittylock.png', id: 'ijdghmknjdiabfpdodkgeoeidahfbiei',
+      en: {
+        tag: 'Social media blocker with a pixel cat',
+        pitch: 'Blocks social media at the hours you choose. Want in anyway? You’ll have to defeat your little pixel cat, who levels up every day it survives.',
+        free: 'Free: blocking, the cat, 1 time slot, 3 custom sites',
+        pro: 'Pro: unlimited slots & sites, cat coats, €4.99 lifetime'
+      },
+      fr: {
+        tag: 'Bloqueur de réseaux sociaux avec un chat en pixel art',
+        pitch: 'Bloque les réseaux sociaux aux heures que tu choisis. Pour passer quand même, il faut vaincre ton petit chat en pixel art, qui gagne un niveau chaque jour où il survit.',
+        free: 'Gratuit : blocage, le chat, 1 plage horaire, 3 sites perso',
+        pro: 'Pro : plages et sites illimités, robes du chat, 4,99 € à vie'
+      }
+    }
+  };
+
+  var T = {
+    en: {
+      byline: '· indie extensions',
+      title: 'Three small extensions, made by one person.',
+      lead: 'No account, no cloud: everything stays on your computer. Each one is free to use, with an optional Pro upgrade that stays honest about what it adds.',
+      add: 'Add to Chrome',
+      p1: '🔒 100% local: your data stays on your device.',
+      p2: '🚫 No ads, no account, no reselling of anything.',
+      p3: '✉️ A real human answers: ' + MAIL,
+      privacy: 'Privacy policy', terms: 'Terms of sale & legal notice', contact: 'Contact',
+      byeTitle: function (n) { return 'Sorry to see you go…'; },
+      byeText: function (n) { return 'Thanks for giving ' + n + ' a try. I’m a solo developer and every piece of feedback helps: what was missing, what annoyed you, what broke? One sentence is plenty.'; },
+      byeBtn: 'Tell me why (email)',
+      byeSubject: function (n) { return n + ' — why I uninstalled'; },
+      byeBody: 'Hi Nicolas,\n\nI uninstalled because:\n\n',
+      byeFeatured: 'Maybe one of these will suit you better',
+      leftNote: function (n) { return 'You just uninstalled ' + n + '. You can reinstall it anytime, your feedback is welcome either way.'; },
+      hiTitle: function (n) { return 'Thanks for installing ' + n + '!'; },
+      hiText: 'It’s ready to use. While you’re here, here are my other two extensions, same spirit: local, simple, honest pricing.',
+      othersTitle: 'From the same creator',
+      installed: '✓ Installed'
+    },
+    fr: {
+      byline: '· extensions indépendantes',
+      title: 'Trois petites extensions, faites par une seule personne.',
+      lead: 'Pas de compte, pas de cloud : tout reste sur ton ordinateur. Chacune est gratuite, avec une option Pro facultative qui dit clairement ce qu’elle ajoute.',
+      add: 'Ajouter à Chrome',
+      p1: '🔒 100 % local : tes données restent sur ton appareil.',
+      p2: '🚫 Pas de pub, pas de compte, rien n’est revendu.',
+      p3: '✉️ Un vrai humain te répond : ' + MAIL,
+      privacy: 'Politique de confidentialité', terms: 'CGV et mentions légales', contact: 'Contact',
+      byeTitle: function (n) { return 'Désolé de te voir partir…'; },
+      byeText: function (n) { return 'Merci d’avoir essayé ' + n + '. Je suis développeur solo et chaque retour m’aide : qu’est-ce qui manquait, qu’est-ce qui t’a agacé, qu’est-ce qui a planté ? Une phrase suffit.'; },
+      byeBtn: 'Me dire pourquoi (e-mail)',
+      byeSubject: function (n) { return n + ' — pourquoi je l’ai désinstallée'; },
+      byeBody: 'Bonjour Nicolas,\n\nJe l’ai désinstallée parce que :\n\n',
+      byeFeatured: 'Peut-être que l’une de celles-ci te conviendra mieux',
+      leftNote: function (n) { return 'Tu viens de désinstaller ' + n + '. Tu peux la réinstaller quand tu veux, ton avis m’intéresse dans tous les cas.'; },
+      hiTitle: function (n) { return 'Merci d’avoir installé ' + n + ' !'; },
+      hiText: 'Elle est prête à l’emploi. Pendant que tu es là, voici mes deux autres extensions, même esprit : locales, simples, prix honnêtes.',
+      othersTitle: 'Du même créateur',
+      installed: '✓ Déjà installée'
+    }
+  };
+
+  var params = new URLSearchParams(location.search);
+  var from = (params.get('from') || '').toLowerCase().replace(/[^a-z]/g, '');
+  if (!APPS[from]) from = '';
+  var event = (params.get('event') || '').toLowerCase();
+  if (event !== 'install' && event !== 'uninstall') event = '';
+  if (!from) event = event === 'uninstall' ? 'uninstall' : '';
+
+  var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+  var lang = /^fr/i.test(nav) ? 'fr' : 'en';
+  var forced = (params.get('lang') || '').toLowerCase();
+  if (forced === 'fr' || forced === 'en') lang = forced;
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function storeUrl(key) {
+    var src = from ? ('hub-' + from + (event ? '-' + event : '')) : 'hub';
+    return STORE + APPS[key].id + '?utm_source=' + encodeURIComponent(src);
+  }
+
+  function card(key, t, dim, installed) {
+    var a = APPS[key], c = a[lang];
+    var box = el('article', 'card' + (dim ? ' dim' : ''));
+    var img = el('img');
+    img.src = a.icon; img.alt = a.name + ' icon'; img.width = 80; img.height = 80; img.loading = 'lazy';
+    var body = el('div');
+    body.appendChild(el('h3', null, a.name));
+    body.appendChild(el('div', 'tag', c.tag));
+    body.appendChild(el('p', 'pitch', c.pitch));
+    var plans = el('div', 'plans');
+    plans.appendChild(el('span', 'pill', c.free));
+    plans.appendChild(el('span', 'pill', c.pro));
+    body.appendChild(plans);
+    if (installed) {
+      body.appendChild(el('span', 'pill', t.installed));
+    } else {
+      var cta = el('a', 'cta', t.add);
+      cta.href = storeUrl(key); cta.target = '_blank'; cta.rel = 'noopener';
+      body.appendChild(cta);
+    }
+    if (dim && !installed) body.appendChild(el('p', 'left-note', t.leftNote(a.name)));
+    box.appendChild(img); box.appendChild(body);
+    return box;
+  }
+
+  function render() {
+    var t = T[lang];
+    document.documentElement.lang = lang;
+    document.getElementById('langBtn').textContent = lang === 'fr' ? 'EN' : 'FR';
+    document.querySelectorAll('[data-i18n]').forEach(function (n) {
+      var v = t[n.getAttribute('data-i18n')];
+      if (typeof v === 'string') n.textContent = v;
+    });
+
+    // Order: default, then the extension the visitor comes from goes last.
+    var order = ['easyrec', 'tabzero', 'kittylock'];
+    if (from) order = order.filter(function (k) { return k !== from; }).concat(from);
+
+    // Notice
+    var notice = document.getElementById('notice');
+    notice.innerHTML = '';
+    notice.hidden = true;
+    notice.className = 'notice';
+    var fname = from ? APPS[from].name : (lang === 'fr' ? 'mon extension' : 'my extension');
+    if (event === 'uninstall') {
+      notice.className = 'notice bye';
+      notice.appendChild(el('h2', null, t.byeTitle(fname)));
+      notice.appendChild(el('p', null, t.byeText(fname)));
+      var m = el('a', 'btn-line', t.byeBtn);
+      m.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(t.byeSubject(from ? APPS[from].name : 'Extension')) +
+               '&body=' + encodeURIComponent(t.byeBody);
+      var p = el('p'); p.appendChild(m); notice.appendChild(p);
+      notice.hidden = false;
+    } else if (event === 'install' && from) {
+      notice.appendChild(el('h2', null, t.hiTitle(fname)));
+      notice.appendChild(el('p', null, t.hiText));
+      notice.hidden = false;
+    }
+
+    // Section label when we highlight the two others
+    var ft = document.getElementById('featuredTitle');
+    if (from && event) {
+      ft.textContent = event === 'uninstall' ? t.byeFeatured : t.othersTitle;
+      ft.hidden = false;
+    } else { ft.hidden = true; }
+
+    var grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    order.forEach(function (k) {
+      grid.appendChild(card(k, t, k === from && !!event, event === 'install' && k === from));
+    });
+  }
+
+  document.getElementById('langBtn').addEventListener('click', function () {
+    lang = lang === 'fr' ? 'en' : 'fr';
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -44,9 +44,9 @@
 <!-- ============ ENGLISH ============ -->
 <section class="lang-section active" data-lang="en">
 <h1>Privacy Policy</h1>
-<p class="subtitle">Applies to: <strong>OneClick</strong> (Tab Workflow &amp; Session Saver), <strong>EasyRec</strong> (Camera Recorder), <strong>ClipStack</strong> (Clipboard Manager &amp; FIFO Queue) and <strong>Kitty Lock</strong> (Social Media Blocker)<br>
+<p class="subtitle">Applies to: <strong>TabZero</strong> (Tab Workflows &amp; Session Saver, formerly OneClick), <strong>EasyRec</strong> (Screen &amp; Webcam Recorder), <strong>ClipStack</strong> (Clipboard Manager &amp; FIFO Queue) and <strong>Kitty Lock</strong> (Social Media Blocker)<br>
 Publisher: Nicolas Follezou — SIRET 83776371300059<br>
-Last updated: September 29, 2026</p>
+Last updated: September 30, 2026</p>
 
 <div class="notice">This policy complies with EU Regulation 2016/679 (GDPR) and French Law No. 78-17 of January 6, 1978 (Informatique et Libertés), as amended.</div>
 
@@ -57,30 +57,33 @@ Address: Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, France<br>
 Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Scope</h2>
-<p>This policy applies to all Chrome extensions published by Nicolas Follezou on the Chrome Web Store, including <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> and <strong>Kitty Lock</strong>. Each extension is described separately where their data practices differ.</p>
+<p>This policy applies to all Chrome extensions published by Nicolas Follezou on the Chrome Web Store, including <strong>TabZero</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> and <strong>Kitty Lock</strong>. Each extension is described separately where their data practices differ.</p>
 
 <h2>3. Data We Collect — and What We Do Not</h2>
 
-<h3>3.1 OneClick (Tab Workflow &amp; Session Saver)</h3>
+<h3>3.1 TabZero (Tab Workflows &amp; Session Saver)</h3>
 <p>All your workflows (tab names, URLs, titles, favicons) and preferences are stored exclusively on your device using <code>chrome.storage.local</code> and never transmitted to any server. <strong>We do not collect any personally identifiable information (PII).</strong></p>
-<p>OneClick transmits <strong>anonymous, non-identifiable usage events</strong> (e.g. "workflow saved", "workflow restored") to <strong>Plausible Analytics</strong>, a privacy-first analytics platform based in the European Union (Germany). Plausible uses no cookies, no localStorage, and stores no personally identifiable information. IP addresses are hashed and rotated every 24 hours solely to prevent spam, and are never persisted nor used to track individuals. The sole purpose is to understand feature usage and improve the extension.</p>
+<p>TabZero transmits <strong>anonymous, non-identifiable usage events</strong> (e.g. "workflow saved", "workflow restored") to <strong>Plausible Analytics</strong>, a privacy-first analytics platform based in the European Union (Germany). Plausible uses no cookies, no localStorage, and stores no personally identifiable information. IP addresses are hashed and rotated every 24 hours solely to prevent spam, and are never persisted nor used to track individuals. The sole purpose is to understand feature usage and improve the extension.</p>
 
-<h3>3.2 EasyRec (Camera Recorder)</h3>
-<p>EasyRec stores recording preferences locally on your device via <code>chrome.storage.local</code>. Recordings (video, screen captures, photos) are processed entirely in your browser and saved locally via <code>chrome.downloads</code>. No recording content is ever uploaded to any server.</p>
+<h3>3.2 EasyRec (Screen &amp; Webcam Recorder)</h3>
+<p>EasyRec stores recording preferences locally on your device via <code>chrome.storage.local</code>. Recordings (video, screen captures, photos) are processed entirely in your browser and saved to your device through your browser's normal download. No recording content is ever uploaded to any server.</p>
 <p>EasyRec transmits <strong>anonymous, non-identifiable usage events</strong> (e.g. "recording started", "video exported") to <strong>Plausible Analytics</strong>, a privacy-first analytics platform based in the European Union (Germany). Plausible uses no cookies, no localStorage, and stores no personally identifiable information. IP addresses are hashed and rotated every 24 hours solely to prevent spam, and are never persisted nor used to track individuals. The sole purpose is to understand feature usage and improve the extension.</p>
 
 <h3>3.3 ClipStack (Clipboard Manager &amp; FIFO Queue)</h3>
 <p><strong>We do not collect any personal data.</strong> ClipStack captures the text you explicitly copy (e.g., via Ctrl+C) to build your clipboard history. All data is stored exclusively on your device using <code>chrome.storage.local</code>. No clipboard data is ever transmitted to our servers or any third party.</p>
 
 <h3>3.4 Kitty Lock (Social Media Blocker)</h3>
-<p><strong>We do not collect any personal data.</strong> Kitty Lock stores your settings (time slots, blocked sites), your virtual cat and its "graveyard" exclusively on your device using <code>chrome.storage.local</code>. To block a site, the extension only compares the domain of the page being opened with your block list; it never reads page content, never records your browsing history and sends nothing to our servers. Kitty Lock uses no analytics.</p>
+<p><strong>We do not collect any personal data.</strong> Kitty Lock stores your settings (time slots, blocked sites), your virtual cat and its "graveyard" exclusively on your device using <code>chrome.storage.local</code>. To block a site, the extension only compares the domain of the page being opened with your block list; it never reads page content, never records your browsing history and sends nothing to our servers. Kitty Lock uses no analytics. The only exception is an optional Pro purchase, handled as described in section 5.</p>
+
+<h3>3.5 Our website (nicompc.github.io)</h3>
+<p>This site, including the page that may open when you install or uninstall one of the extensions, is a static page hosted by GitHub Pages. It uses no cookies, no analytics and no third-party scripts. The optional <code>?from=</code> and <code>?event=</code> parameters in its address are only read by your browser to adapt the message; they are not stored by us. GitHub may process technical data such as your IP address for security purposes (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">GitHub Privacy Statement</a>).</p>
 
 <h2>4. Legal Basis for Processing (GDPR Art. 6)</h2>
 <table>
   <tr><th>Processing</th><th>Legal Basis</th></tr>
   <tr><td>Local storage of preferences and workflows (all extensions)</td><td>Art. 6(1)(b) — Performance of a contract (provision of the extension's service)</td></tr>
   <tr><td>Payment processing via Stripe/ExtensionPay</td><td>Art. 6(1)(b) — Performance of a contract</td></tr>
-  <tr><td>Anonymous analytics (EasyRec and OneClick via Plausible Analytics)</td><td>Art. 6(1)(f) — Legitimate interest (improving extension quality, no impact on user rights)</td></tr>
+  <tr><td>Anonymous analytics (EasyRec and TabZero via Plausible Analytics)</td><td>Art. 6(1)(f) — Legitimate interest (improving extension quality, no impact on user rights)</td></tr>
 </table>
 
 <h2>5. Third-Party Services</h2>
@@ -89,16 +92,16 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
   <li><strong><a href="https://extensionpay.com" target="_blank">ExtensionPay</a></strong> — manages license activation and verification. Acts as a data processor on our behalf.</li>
   <li><strong><a href="https://stripe.com/privacy" target="_blank">Stripe, Inc.</a></strong> — processes payments. Your email address and payment information are collected and processed directly by Stripe under their own Privacy Policy. Stripe is based in the United States; transfers are covered by Standard Contractual Clauses (SCCs) under GDPR Art. 46.</li>
 </ul>
-<p>EasyRec and OneClick additionally use:</p>
+<p>EasyRec and TabZero additionally use:</p>
 <ul>
-  <li><strong><a href="https://plausible.io/data-policy" target="_blank">Plausible Analytics (Plausible Insights OÜ)</a></strong> — used by <strong>OneClick and EasyRec</strong>. EU-based (servers in Germany), GDPR-compliant by design. Cookieless, no PII, no cross-site tracking. IP addresses are hashed and rotated daily, never persisted.</li>
+  <li><strong><a href="https://plausible.io/data-policy" target="_blank">Plausible Analytics (Plausible Insights OÜ)</a></strong> — used by <strong>TabZero and EasyRec</strong>. EU-based (servers in Germany), GDPR-compliant by design. Cookieless, no PII, no cross-site tracking. IP addresses are hashed and rotated daily, never persisted.</li>
 </ul>
 
 <h2>6. Data Retention</h2>
 <ul>
   <li><strong>Local extension data</strong> (workflows, settings, recordings, clipboard history): retained on your device until you uninstall the extension or clear its storage.</li>
   <li><strong>Payment data</strong>: retained by Stripe and ExtensionPay according to their own policies. We do not store payment card data.</li>
-  <li><strong>OneClick and EasyRec analytics (Plausible)</strong>: aggregated event counts (no PII) retained as long as the analytics account remains active. No raw events containing personal data are ever stored.</li>
+  <li><strong>TabZero and EasyRec analytics (Plausible)</strong>: aggregated event counts (no PII) retained as long as the analytics account remains active. No raw events containing personal data are ever stored.</li>
 </ul>
 
 <h2>7. Your Rights (GDPR)</h2>
@@ -115,19 +118,23 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <p>You also have the right to lodge a complaint with the French data protection authority: <strong>CNIL</strong> — <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a>, 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.</p>
 
 <h2>8. Chrome Extension Permissions</h2>
-<h3>OneClick</h3>
+<h3>TabZero</h3>
 <ul>
   <li><strong>tabs</strong> — read titles and URLs of open tabs to save them to a workflow</li>
   <li><strong>storage</strong> — save workflows and preferences locally</li>
   <li><strong>windows</strong> — restore a workflow in a new browser window</li>
   <li><strong>favicon</strong> — display the favicon of each saved tab</li>
-  <li><strong>host_permissions (extensionpay.com)</strong> — license verification only</li>
+  <li><strong>sidePanel</strong> — show TabZero in the browser's side panel</li>
+  <li><strong>unlimitedStorage</strong> — keep large numbers of workflows and local backups on your device</li>
+  <li><strong>host_permissions (extensionpay.com)</strong> — license verification for TabZero Pro</li>
 </ul>
 <h3>EasyRec</h3>
 <ul>
-  <li><strong>tabCapture / desktopCapture</strong> — record screen content, processed locally</li>
-  <li><strong>storage</strong> — save recording preferences locally</li>
-  <li><strong>downloads</strong> — save recordings to your device</li>
+  <li><strong>Screen capture</strong> — uses the browser's standard screen-sharing prompt: you choose each time what is recorded (screen, window or tab). Processed locally.</li>
+  <li><strong>storage</strong> — save recording preferences and license status locally</li>
+  <li><strong>tabs / activeTab / windows</strong> — open the recorder and studio windows and identify the tab you choose to record</li>
+  <li><strong>notifications</strong> — let you know when your recording is ready in the studio</li>
+  <li><strong>scripting + access to websites (optional)</strong> — requested only if you enable the webcam bubble or click highlighting on the page you record; used only to display them on that page</li>
   <li><strong>host_permissions (extensionpay.com)</strong> — license verification only</li>
 </ul>
 <h3>ClipStack</h3>
@@ -162,9 +169,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <!-- ============ FRANÇAIS ============ -->
 <section class="lang-section" data-lang="fr">
 <h1>Politique de Confidentialité</h1>
-<p class="subtitle">Applicable à : <strong>OneClick</strong> (Workflows d'onglets), <strong>EasyRec</strong> (Enregistreur webcam), <strong>ClipStack</strong> (Presse-papiers &amp; File d'attente) et <strong>Kitty Lock</strong> (Bloqueur de réseaux sociaux)<br>
+<p class="subtitle">Applicable à : <strong>TabZero</strong> (Workflows d'onglets, anciennement OneClick), <strong>EasyRec</strong> (Enregistreur d'écran et webcam), <strong>ClipStack</strong> (Presse-papiers &amp; File d'attente) et <strong>Kitty Lock</strong> (Bloqueur de réseaux sociaux)<br>
 Éditeur : Nicolas Follezou — SIRET 83776371300059<br>
-Dernière mise à jour : 29 septembre 2026</p>
+Dernière mise à jour : 30 septembre 2026</p>
 
 <div class="notice">Cette politique est conforme au Règlement (UE) 2016/679 (RGPD) et à la Loi Informatique et Libertés n°78-17 du 6 janvier 1978 modifiée.</div>
 
@@ -175,30 +182,33 @@ Adresse : Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, France<br>
 Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Champ d'application</h2>
-<p>Cette politique s'applique à toutes les extensions Chrome publiées par Nicolas Follezou, dont <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> et <strong>Kitty Lock</strong>. Les pratiques propres à chaque extension sont décrites séparément.</p>
+<p>Cette politique s'applique à toutes les extensions Chrome publiées par Nicolas Follezou, dont <strong>TabZero</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> et <strong>Kitty Lock</strong>. Les pratiques propres à chaque extension sont décrites séparément.</p>
 
 <h2>3. Données collectées</h2>
 
-<h3>3.1 OneClick (Workflows d'onglets)</h3>
+<h3>3.1 TabZero (Workflows d'onglets)</h3>
 <p>Vos workflows (noms, URLs, titres, favicons) et préférences sont stockés exclusivement sur votre appareil via <code>chrome.storage.local</code> et ne quittent jamais votre navigateur. <strong>Aucune information personnelle identifiable (PII) n'est collectée.</strong></p>
-<p>OneClick envoie des <strong>événements d'usage anonymes et non identifiants</strong> (ex. : « workflow sauvegardé », « workflow restauré ») à <strong>Plausible Analytics</strong>, une plateforme d'analytics privacy-first hébergée dans l'Union Européenne (Allemagne). Plausible n'utilise aucun cookie, aucun localStorage, et ne stocke aucune information personnelle identifiable. Les adresses IP sont hachées et renouvelées toutes les 24 heures uniquement à des fins anti-spam, et ne sont jamais conservées ni utilisées pour identifier ou suivre un utilisateur. Leur seule finalité est de comprendre l'utilisation des fonctionnalités et d'améliorer l'extension.</p>
+<p>TabZero envoie des <strong>événements d'usage anonymes et non identifiants</strong> (ex. : « workflow sauvegardé », « workflow restauré ») à <strong>Plausible Analytics</strong>, une plateforme d'analytics privacy-first hébergée dans l'Union Européenne (Allemagne). Plausible n'utilise aucun cookie, aucun localStorage, et ne stocke aucune information personnelle identifiable. Les adresses IP sont hachées et renouvelées toutes les 24 heures uniquement à des fins anti-spam, et ne sont jamais conservées ni utilisées pour identifier ou suivre un utilisateur. Leur seule finalité est de comprendre l'utilisation des fonctionnalités et d'améliorer l'extension.</p>
 
-<h3>3.2 EasyRec (Enregistreur webcam)</h3>
-<p>EasyRec stocke vos préférences d'enregistrement localement via <code>chrome.storage.local</code>. Les enregistrements (vidéos, captures, photos) sont traités entièrement dans votre navigateur et sauvegardés localement via <code>chrome.downloads</code>. Aucun contenu n'est jamais transmis à un serveur.</p>
+<h3>3.2 EasyRec (Enregistreur d'écran et webcam)</h3>
+<p>EasyRec stocke vos préférences d'enregistrement localement via <code>chrome.storage.local</code>. Les enregistrements (vidéos, captures, photos) sont traités entièrement dans votre navigateur et enregistrés sur votre appareil via le téléchargement standard du navigateur. Aucun contenu n'est jamais transmis à un serveur.</p>
 <p>EasyRec envoie des <strong>événements d'usage anonymes et non identifiants</strong> (ex. : « enregistrement démarré », « vidéo exportée ») à <strong>Plausible Analytics</strong>, une plateforme d'analytics privacy-first hébergée dans l'Union Européenne (Allemagne). Plausible n'utilise aucun cookie, aucun localStorage, et ne stocke aucune information personnelle identifiable. Les adresses IP sont hachées et renouvelées toutes les 24 heures uniquement à des fins anti-spam, et ne sont jamais conservées ni utilisées pour identifier ou suivre un utilisateur. Leur seule finalité est de comprendre l'utilisation des fonctionnalités et d'améliorer l'extension.</p>
 
 <h3>3.3 ClipStack (Presse-papiers &amp; File d'attente)</h3>
 <p><strong>Aucune donnée personnelle n'est collectée.</strong> ClipStack capture le texte que vous copiez explicitement (ex: Ctrl+C) pour construire votre historique. Toutes les données sont stockées exclusivement sur votre appareil via <code>chrome.storage.local</code>. Aucune donnée du presse-papiers n'est jamais transmise à nos serveurs ou à des tiers.</p>
 
 <h3>3.4 Kitty Lock (Bloqueur de réseaux sociaux)</h3>
-<p><strong>Aucune donnée personnelle n'est collectée.</strong> Kitty Lock stocke vos réglages (plages horaires, sites bloqués), votre chat virtuel et son « cimetière » exclusivement sur votre appareil via <code>chrome.storage.local</code>. Pour bloquer un site, l'extension compare uniquement le domaine de la page ouverte à votre liste ; elle ne lit jamais le contenu des pages, n'enregistre pas votre historique et n'envoie rien à nos serveurs. Kitty Lock n'utilise aucun outil d'analytics.</p>
+<p><strong>Aucune donnée personnelle n'est collectée.</strong> Kitty Lock stocke vos réglages (plages horaires, sites bloqués), votre chat virtuel et son « cimetière » exclusivement sur votre appareil via <code>chrome.storage.local</code>. Pour bloquer un site, l'extension compare uniquement le domaine de la page ouverte à votre liste ; elle ne lit jamais le contenu des pages, n'enregistre pas votre historique et n'envoie rien à nos serveurs. Kitty Lock n'utilise aucun outil d'analytics. Seule exception : l'achat facultatif de Pro, traité comme décrit à la section 5.</p>
+
+<h3>3.5 Notre site (nicompc.github.io)</h3>
+<p>Ce site, y compris la page qui peut s'ouvrir à l'installation ou à la désinstallation d'une extension, est une page statique hébergée par GitHub Pages. Il n'utilise ni cookie, ni outil d'analytics, ni script tiers. Les paramètres facultatifs <code>?from=</code> et <code>?event=</code> de son adresse sont lus uniquement par votre navigateur pour adapter le message ; nous ne les conservons pas. GitHub peut traiter des données techniques comme votre adresse IP à des fins de sécurité (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">déclaration de confidentialité de GitHub</a>).</p>
 
 <h2>4. Base légale des traitements (Art. 6 RGPD)</h2>
 <table>
   <tr><th>Traitement</th><th>Base légale</th></tr>
   <tr><td>Stockage local des préférences et workflows (toutes extensions)</td><td>Art. 6(1)(b) — Exécution du contrat (fourniture du service)</td></tr>
   <tr><td>Traitement des paiements via Stripe/ExtensionPay</td><td>Art. 6(1)(b) — Exécution du contrat</td></tr>
-  <tr><td>Analytics anonymes (EasyRec et OneClick via Plausible Analytics)</td><td>Art. 6(1)(f) — Intérêt légitime (amélioration de l'extension, sans impact sur vos droits)</td></tr>
+  <tr><td>Analytics anonymes (EasyRec et TabZero via Plausible Analytics)</td><td>Art. 6(1)(f) — Intérêt légitime (amélioration de l'extension, sans impact sur vos droits)</td></tr>
 </table>
 
 <h2>5. Sous-traitants et tiers</h2>
@@ -207,16 +217,16 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
   <li><strong><a href="https://extensionpay.com" target="_blank">ExtensionPay</a></strong> — gestion des licences. Agit en tant que sous-traitant au sens du RGPD.</li>
   <li><strong><a href="https://stripe.com/fr/privacy" target="_blank">Stripe, Inc.</a></strong> — traitement des paiements. Votre adresse email et vos données de paiement sont collectées directement par Stripe. Stripe est basé aux États-Unis ; les transferts sont encadrés par des Clauses Contractuelles Types (CCT) conformément à l'Art. 46 RGPD.</li>
 </ul>
-<p>EasyRec et OneClick utilisent également :</p>
+<p>EasyRec et TabZero utilisent également :</p>
 <ul>
-  <li><strong><a href="https://plausible.io/data-policy" target="_blank">Plausible Analytics (Plausible Insights OÜ)</a></strong> — utilisé par <strong>OneClick et EasyRec</strong>. Hébergé dans l'Union Européenne (serveurs en Allemagne), conforme RGPD par conception. Sans cookies, sans donnée personnelle, sans tracking inter-sites. Les adresses IP sont hachées et renouvelées chaque jour, jamais conservées.</li>
+  <li><strong><a href="https://plausible.io/data-policy" target="_blank">Plausible Analytics (Plausible Insights OÜ)</a></strong> — utilisé par <strong>TabZero et EasyRec</strong>. Hébergé dans l'Union Européenne (serveurs en Allemagne), conforme RGPD par conception. Sans cookies, sans donnée personnelle, sans tracking inter-sites. Les adresses IP sont hachées et renouvelées chaque jour, jamais conservées.</li>
 </ul>
 
 <h2>6. Durée de conservation</h2>
 <ul>
   <li><strong>Données locales</strong> (workflows, paramètres, enregistrements, historique du presse-papiers) : conservées sur votre appareil jusqu'à désinstallation de l'extension.</li>
   <li><strong>Données de paiement</strong> : conservées par Stripe et ExtensionPay selon leurs propres politiques. Nous ne stockons aucune donnée bancaire.</li>
-  <li><strong>Analytics OneClick et EasyRec (Plausible)</strong> : compteurs d'événements agrégés (sans donnée personnelle) conservés tant que le compte analytics reste actif. Aucun événement brut contenant des données personnelles n'est jamais stocké.</li>
+  <li><strong>Analytics TabZero et EasyRec (Plausible)</strong> : compteurs d'événements agrégés (sans donnée personnelle) conservés tant que le compte analytics reste actif. Aucun événement brut contenant des données personnelles n'est jamais stocké.</li>
 </ul>
 
 <h2>7. Vos droits (RGPD)</h2>
@@ -233,19 +243,23 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <p>Vous avez également le droit d'introduire une réclamation auprès de la <strong>CNIL</strong> — <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a>, 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.</p>
 
 <h2>8. Permissions des extensions Chrome</h2>
-<h3>OneClick</h3>
+<h3>TabZero</h3>
 <ul>
   <li><strong>tabs</strong> — lecture des titres et URLs pour capturer un workflow</li>
   <li><strong>storage</strong> — sauvegarde locale des workflows et préférences</li>
   <li><strong>windows</strong> — restauration d'un workflow dans une nouvelle fenêtre</li>
   <li><strong>favicon</strong> — affichage des favicons des onglets sauvegardés</li>
-  <li><strong>host_permissions (extensionpay.com)</strong> — vérification de licence uniquement</li>
+  <li><strong>sidePanel</strong> — affichage de TabZero dans le panneau latéral du navigateur</li>
+  <li><strong>unlimitedStorage</strong> — conservation locale d'un grand nombre de workflows et de sauvegardes</li>
+  <li><strong>host_permissions (extensionpay.com)</strong> — vérification de la licence TabZero Pro</li>
 </ul>
 <h3>EasyRec</h3>
 <ul>
-  <li><strong>tabCapture / desktopCapture</strong> — enregistrement d'écran, traité localement</li>
-  <li><strong>storage</strong> — sauvegarde locale des préférences</li>
-  <li><strong>downloads</strong> — enregistrement des fichiers sur votre appareil</li>
+  <li><strong>Capture d'écran</strong> — via la fenêtre de partage d'écran standard du navigateur : vous choisissez à chaque fois ce qui est enregistré (écran, fenêtre ou onglet). Traitement local.</li>
+  <li><strong>storage</strong> — sauvegarde locale des préférences et du statut de licence</li>
+  <li><strong>tabs / activeTab / windows</strong> — ouverture des fenêtres d'enregistrement et du studio, identification de l'onglet choisi</li>
+  <li><strong>notifications</strong> — vous prévenir quand votre enregistrement est prêt dans le studio</li>
+  <li><strong>scripting + accès aux sites (facultatif)</strong> — demandé uniquement si vous activez la bulle webcam ou la mise en évidence des clics sur la page enregistrée ; sert uniquement à les afficher sur cette page</li>
   <li><strong>host_permissions (extensionpay.com)</strong> — vérification de licence uniquement</li>
 </ul>
 <h3>ClipStack</h3>
@@ -280,9 +294,9 @@ Email : <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <!-- ============ ESPAÑOL ============ -->
 <section class="lang-section" data-lang="es">
 <h1>Política de Privacidad</h1>
-<p class="subtitle">Aplicable a: <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> y <strong>Kitty Lock</strong><br>
+<p class="subtitle">Aplicable a: <strong>TabZero</strong> (antes OneClick), <strong>EasyRec</strong>, <strong>ClipStack</strong> y <strong>Kitty Lock</strong><br>
 Editor: Nicolas Follezou — SIRET 83776371300059<br>
-Última actualización: 29 de septiembre de 2026</p>
+Última actualización: 30 de septiembre de 2026</p>
 
 <div class="notice">Esta política cumple con el Reglamento (UE) 2016/679 (RGPD) y la legislación francesa de protección de datos.</div>
 
@@ -292,31 +306,29 @@ SIRET: 83776371300059 — Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, F
 Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Datos recopilados</h2>
-<h3>OneClick</h3>
-<p>Todos tus flujos de trabajo y preferencias se almacenan localmente en tu dispositivo mediante <code>chrome.storage.local</code> y nunca se transmiten a ningún servidor. <strong>No recopilamos ninguna información de identificación personal (PII).</strong> OneClick envía eventos de uso <strong>anónimos y no identificables</strong> a <strong>Plausible Analytics</strong>, una plataforma privacy-first con sede en la Unión Europea (Alemania). Plausible no usa cookies ni almacena ninguna información personal identificable. Las direcciones IP se hashean y rotan cada 24 horas únicamente para prevenir spam, y nunca se conservan.</p>
+<h3>TabZero</h3>
+<p>Todos tus flujos de trabajo y preferencias se almacenan localmente en tu dispositivo mediante <code>chrome.storage.local</code> y nunca se transmiten a ningún servidor. <strong>No recopilamos ninguna información de identificación personal (PII).</strong> TabZero envía eventos de uso <strong>anónimos y no identificables</strong> a <strong>Plausible Analytics</strong>, una plataforma privacy-first con sede en la Unión Europea (Alemania). Plausible no usa cookies ni almacena ninguna información personal identificable. Las direcciones IP se hashean y rotan cada 24 horas únicamente para prevenir spam, y nunca se conservan.</p>
 <h3>EasyRec</h3>
 <p>Las grabaciones se procesan íntegramente en tu navegador y se guardan localmente. EasyRec envía eventos de uso <strong>anónimos y no identificables</strong> a <strong>Plausible Analytics</strong>, una plataforma privacy-first con sede en la Unión Europea (Alemania). Plausible no usa cookies ni almacena ninguna información personal identificable. Las direcciones IP se hashean y rotan cada 24 horas únicamente para prevenir spam, y nunca se conservan.</p>
 <h3>ClipStack</h3>
 <p><strong>No recopilamos datos personales.</strong> El historial del portapapeles se almacena exclusivamente en tu dispositivo (local storage) y nunca se transmite a servidores externos.</p>
 <h3>Kitty Lock</h3>
-<p><strong>Não recolhemos dados pessoais.</strong> As suas definições (horários, sites bloqueados) e o seu gato virtual são armazenados exclusivamente no seu dispositivo. A extensão apenas compara o domínio da página aberta com a sua lista de bloqueio; nunca lê o conteúdo das páginas nem envia dados para servidores externos. Sem analytics.</p>
-<h3>Kitty Lock</h3>
-<p><strong>Wir erheben keine personenbezogenen Daten.</strong> Ihre Einstellungen (Zeitfenster, gesperrte Websites) und Ihre virtuelle Katze werden ausschließlich lokal auf Ihrem Gerät gespeichert. Die Erweiterung vergleicht nur die Domain der geöffneten Seite mit Ihrer Sperrliste; sie liest niemals Seiteninhalte und überträgt keine Daten an externe Server. Keine Analytics.</p>
-<h3>Kitty Lock</h3>
-<p><strong>No recopilamos datos personales.</strong> Tus ajustes (franjas horarias, sitios bloqueados) y tu gato virtual se almacenan exclusivamente en tu dispositivo. La extensión solo compara el dominio de la página abierta con tu lista de bloqueo; nunca lee el contenido de las páginas ni envía datos a servidores externos. Sin analytics.</p>
+<p><strong>No recopilamos datos personales.</strong> Tus ajustes (franjas horarias, sitios bloqueados) y tu gato virtual se almacenan exclusivamente en tu dispositivo. La extensión solo compara el dominio de la página abierta con tu lista de bloqueo; nunca lee el contenido de las páginas ni envía datos a servidores externos. Sin analytics. Excepción: si compras Pro, ver «Servicios de terceros».</p>
+<h3>Sitio web (nicompc.github.io)</h3>
+<p>Página estática alojada en GitHub Pages (también la que puede abrirse al instalar o desinstalar una extensión): sin cookies, sin analytics, sin scripts de terceros. GitHub puede tratar datos técnicos como la dirección IP por motivos de seguridad.</p>
 
 <h2>3. Base legal (Art. 6 RGPD)</h2>
 <ul>
   <li>Almacenamiento local: Art. 6(1)(b) — ejecución del contrato</li>
   <li>Procesamiento de pagos: Art. 6(1)(b) — ejecución del contrato</li>
-  <li>Analytics anónimos (EasyRec y OneClick vía Plausible Analytics): Art. 6(1)(f) — interés legítimo</li>
+  <li>Analytics anónimos (EasyRec y TabZero vía Plausible Analytics): Art. 6(1)(f) — interés legítimo</li>
 </ul>
 
 <h2>4. Servicios de terceros</h2>
 <ul>
   <li><strong>ExtensionPay</strong> — gestión de licencias (subencargado del tratamiento)</li>
   <li><strong>Stripe, Inc.</strong> — procesamiento de pagos (EE.UU., transferencia amparada por CCT/RGPD Art. 46)</li>
-  <li><strong>Plausible Analytics (Plausible Insights OÜ)</strong> (OneClick y EasyRec) — analytics privacy-first con sede en la Unión Europea (Alemania), sin cookies, sin PII, IPs hasheadas y rotadas cada 24h. Política: <a href="https://plausible.io/data-policy" target="_blank">plausible.io/data-policy</a></li>
+  <li><strong>Plausible Analytics (Plausible Insights OÜ)</strong> (TabZero y EasyRec) — analytics privacy-first con sede en la Unión Europea (Alemania), sin cookies, sin PII, IPs hasheadas y rotadas cada 24h. Política: <a href="https://plausible.io/data-policy" target="_blank">plausible.io/data-policy</a></li>
 </ul>
 
 <h2>5. Tus derechos (RGPD Art. 15-21)</h2>
@@ -326,9 +338,9 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 <!-- ============ DEUTSCH ============ -->
 <section class="lang-section" data-lang="de">
 <h1>Datenschutzerklärung</h1>
-<p class="subtitle">Gilt für: <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> und <strong>Kitty Lock</strong><br>
+<p class="subtitle">Gilt für: <strong>TabZero</strong> (ehemals OneClick), <strong>EasyRec</strong>, <strong>ClipStack</strong> und <strong>Kitty Lock</strong><br>
 Herausgeber: Nicolas Follezou — SIRET 83776371300059<br>
-Zuletzt aktualisiert: 29. September 2026</p>
+Zuletzt aktualisiert: 30. September 2026</p>
 
 <div class="notice">Diese Erklärung entspricht der EU-Verordnung 2016/679 (DSGVO) und dem französischen Datenschutzgesetz.</div>
 
@@ -338,25 +350,29 @@ SIRET: 83776371300059 — Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, F
 E-Mail: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Erhobene Daten</h2>
-<h3>OneClick</h3>
-<p>Alle Workflows und Einstellungen werden ausschließlich lokal auf deinem Gerät via <code>chrome.storage.local</code> gespeichert. <strong>Wir erheben keinerlei personenbezogene Daten (PII).</strong> OneClick sendet <strong>anonyme, nicht identifizierbare Nutzungsereignisse</strong> an <strong>Plausible Analytics</strong>, eine Privacy-First-Analytics-Plattform mit Sitz in der Europäischen Union (Deutschland). Plausible verwendet keine Cookies und speichert keine personenbezogenen Daten. IP-Adressen werden ausschließlich zur Spam-Vermeidung gehasht und alle 24 Stunden rotiert, sie werden niemals dauerhaft gespeichert.</p>
+<h3>TabZero</h3>
+<p>Alle Workflows und Einstellungen werden ausschließlich lokal auf deinem Gerät via <code>chrome.storage.local</code> gespeichert. <strong>Wir erheben keinerlei personenbezogene Daten (PII).</strong> TabZero sendet <strong>anonyme, nicht identifizierbare Nutzungsereignisse</strong> an <strong>Plausible Analytics</strong>, eine Privacy-First-Analytics-Plattform mit Sitz in der Europäischen Union (Deutschland). Plausible verwendet keine Cookies und speichert keine personenbezogenen Daten. IP-Adressen werden ausschließlich zur Spam-Vermeidung gehasht und alle 24 Stunden rotiert, sie werden niemals dauerhaft gespeichert.</p>
 <h3>EasyRec</h3>
 <p>Aufzeichnungen werden vollständig lokal verarbeitet und gespeichert. EasyRec sendet <strong>anonyme, nicht identifizierbare Nutzungsereignisse</strong> an <strong>Plausible Analytics</strong>, eine Privacy-First-Analytics-Plattform mit Sitz in der Europäischen Union (Deutschland). Plausible verwendet keine Cookies und speichert keine personenbezogenen Daten. IP-Adressen werden ausschließlich zur Spam-Vermeidung gehasht und alle 24 Stunden rotiert, sie werden niemals dauerhaft gespeichert.</p>
 <h3>ClipStack</h3>
 <p><strong>Wir erheben keine personenbezogenen Daten.</strong> Der Verlauf der Zwischenablage wird ausschließlich lokal auf deinem Gerät gespeichert und niemals an externe Server übertragen.</p>
+<h3>Kitty Lock</h3>
+<p><strong>Wir erheben keine personenbezogenen Daten.</strong> Deine Einstellungen (Zeitfenster, gesperrte Websites) und deine virtuelle Katze werden ausschließlich lokal auf deinem Gerät gespeichert. Die Erweiterung vergleicht nur die Domain der geöffneten Seite mit deiner Sperrliste; sie liest niemals Seiteninhalte und überträgt keine Daten an externe Server. Keine Analytics. Ausnahme: beim Kauf von Pro, siehe „Drittanbieter“.</p>
+<h3>Website (nicompc.github.io)</h3>
+<p>Statische Seite auf GitHub Pages (auch die Seite, die sich bei Installation oder Deinstallation einer Erweiterung öffnen kann): keine Cookies, keine Analytics, keine Skripte Dritter. GitHub kann technische Daten wie die IP-Adresse aus Sicherheitsgründen verarbeiten.</p>
 
 <h2>3. Rechtsgrundlage (Art. 6 DSGVO)</h2>
 <ul>
   <li>Lokale Speicherung: Art. 6(1)(b) — Vertragserfüllung</li>
   <li>Zahlungsabwicklung: Art. 6(1)(b) — Vertragserfüllung</li>
-  <li>Anonyme Analyse (EasyRec und OneClick via Plausible Analytics): Art. 6(1)(f) — berechtigtes Interesse</li>
+  <li>Anonyme Analyse (EasyRec und TabZero via Plausible Analytics): Art. 6(1)(f) — berechtigtes Interesse</li>
 </ul>
 
 <h2>4. Drittanbieter</h2>
 <ul>
   <li><strong>ExtensionPay</strong> — Lizenzverwaltung (Auftragsverarbeiter)</li>
   <li><strong>Stripe, Inc.</strong> — Zahlungsabwicklung (USA, Transfer gemäß DSGVO Art. 46 / SCC)</li>
-  <li><strong>Plausible Analytics (Plausible Insights OÜ)</strong> (OneClick und EasyRec) — Privacy-First-Analytics mit Sitz in der EU (Deutschland), keine Cookies, keine PII, IPs gehasht und täglich rotiert. Datenschutzrichtlinie: <a href="https://plausible.io/data-policy" target="_blank">plausible.io/data-policy</a></li>
+  <li><strong>Plausible Analytics (Plausible Insights OÜ)</strong> (TabZero und EasyRec) — Privacy-First-Analytics mit Sitz in der EU (Deutschland), keine Cookies, keine PII, IPs gehasht und täglich rotiert. Datenschutzrichtlinie: <a href="https://plausible.io/data-policy" target="_blank">plausible.io/data-policy</a></li>
 </ul>
 
 <h2>5. Deine Rechte (DSGVO Art. 15-21)</h2>
@@ -366,9 +382,9 @@ E-Mail: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr
 <!-- ============ PORTUGUÊS ============ -->
 <section class="lang-section" data-lang="pt">
 <h1>Política de Privacidade</h1>
-<p class="subtitle">Aplicável a: <strong>OneClick</strong>, <strong>EasyRec</strong>, <strong>ClipStack</strong> e <strong>Kitty Lock</strong><br>
+<p class="subtitle">Aplicável a: <strong>TabZero</strong> (anteriormente OneClick), <strong>EasyRec</strong>, <strong>ClipStack</strong> e <strong>Kitty Lock</strong><br>
 Editor: Nicolas Follezou — SIRET 83776371300059<br>
-Última atualização: 29 de setembro de 2026</p>
+Última atualização: 30 de setembro de 2026</p>
 
 <div class="notice">Esta política está em conformidade com o Regulamento (UE) 2016/679 (RGPD) e a legislação francesa de proteção de dados.</div>
 
@@ -378,25 +394,29 @@ SIRET: 83776371300059 — Appartement 2, 30 rue Lucie Aubrac, 17137 L'Houmeau, F
 Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr</a></p>
 
 <h2>2. Dados recolhidos</h2>
-<h3>OneClick</h3>
-<p>Todos os fluxos de trabalho e preferências são armazenados localmente no seu dispositivo via <code>chrome.storage.local</code> e nunca são transmitidos a qualquer servidor. <strong>Não recolhemos nenhuma informação de identificação pessoal (PII).</strong> O OneClick envia eventos de utilização <strong>anónimos e não identificáveis</strong> para a <strong>Plausible Analytics</strong>, uma plataforma de analytics privacy-first sediada na União Europeia (Alemanha). A Plausible não usa cookies nem armazena qualquer informação pessoal identificável. Os endereços IP são hasheados e renovados a cada 24 horas apenas para prevenir spam, e nunca são conservados.</p>
+<h3>TabZero</h3>
+<p>Todos os fluxos de trabalho e preferências são armazenados localmente no seu dispositivo via <code>chrome.storage.local</code> e nunca são transmitidos a qualquer servidor. <strong>Não recolhemos nenhuma informação de identificação pessoal (PII).</strong> O TabZero envia eventos de utilização <strong>anónimos e não identificáveis</strong> para a <strong>Plausible Analytics</strong>, uma plataforma de analytics privacy-first sediada na União Europeia (Alemanha). A Plausible não usa cookies nem armazena qualquer informação pessoal identificável. Os endereços IP são hasheados e renovados a cada 24 horas apenas para prevenir spam, e nunca são conservados.</p>
 <h3>EasyRec</h3>
 <p>As gravações são processadas inteiramente no seu navegador e guardadas localmente. O EasyRec envia eventos de utilização <strong>anónimos e não identificáveis</strong> para a <strong>Plausible Analytics</strong>, uma plataforma de analytics privacy-first sediada na União Europeia (Alemanha). A Plausible não usa cookies nem armazena qualquer informação pessoal identificável. Os endereços IP são hasheados e renovados a cada 24 horas apenas para prevenir spam, e nunca são conservados.</p>
 <h3>ClipStack</h3>
 <p><strong>Não recolhemos dados pessoais.</strong> O histórico da área de transferência é armazenado exclusivamente no seu dispositivo (local storage) e nunca é transmitido para servidores externos.</p>
+<h3>Kitty Lock</h3>
+<p><strong>Não recolhemos dados pessoais.</strong> As suas definições (horários, sites bloqueados) e o seu gato virtual são armazenados exclusivamente no seu dispositivo. A extensão apenas compara o domínio da página aberta com a sua lista de bloqueio; nunca lê o conteúdo das páginas nem envia dados para servidores externos. Sem analytics. Exceção: se comprar o Pro, ver «Serviços de terceiros».</p>
+<h3>Site web (nicompc.github.io)</h3>
+<p>Página estática alojada no GitHub Pages (incluindo a que pode abrir ao instalar ou desinstalar uma extensão): sem cookies, sem analytics, sem scripts de terceiros. O GitHub pode tratar dados técnicos como o endereço IP por motivos de segurança.</p>
 
 <h2>3. Base legal (Art. 6.º RGPD)</h2>
 <ul>
   <li>Armazenamento local: Art. 6.º(1)(b) — execução do contrato</li>
   <li>Processamento de pagamentos: Art. 6.º(1)(b) — execução do contrato</li>
-  <li>Analytics anónimos (EasyRec e OneClick via Plausible Analytics): Art. 6.º(1)(f) — interesse legítimo</li>
+  <li>Analytics anónimos (EasyRec e TabZero via Plausible Analytics): Art. 6.º(1)(f) — interesse legítimo</li>
 </ul>
 
 <h2>4. Serviços de terceiros</h2>
 <ul>
   <li><strong>ExtensionPay</strong> — gestão de licenças (subcontratante)</li>
   <li><strong>Stripe, Inc.</strong> — processamento de pagamentos (EUA, transferência ao abrigo do Art. 46.º RGPD / CCT)</li>
-  <li><strong>Plausible Analytics (Plausible Insights OÜ)</strong> (OneClick e EasyRec) — analytics privacy-first sediado na UE (Alemanha), sem cookies, sem PII, IPs hasheados e rotacionados diariamente. Política: <a href="https://plausible.io/data-policy" target="_blank">plausible.io/data-policy</a></li>
+  <li><strong>Plausible Analytics (Plausible Insights OÜ)</strong> (TabZero e EasyRec) — analytics privacy-first sediado na UE (Alemanha), sem cookies, sem PII, IPs hasheados e rotacionados diariamente. Política: <a href="https://plausible.io/data-policy" target="_blank">plausible.io/data-policy</a></li>
 </ul>
 
 <h2>5. Os seus direitos (RGPD Art. 15.º-21.º)</h2>
@@ -405,7 +425,7 @@ Email: <a href="mailto:nicolas.follezou@hotmail.fr">nicolas.follezou@hotmail.fr<
 
 <div class="footer">
   <p>Nicolas Follezou — Chrome Extensions Developer &mdash; SIRET 83776371300059</p>
-  <p style="margin-top:6px;"><a href="terms.html">Terms of Sale &amp; Legal Notice</a></p>
+  <p style="margin-top:6px;"><a href="terms.html">Terms of Sale &amp; Legal Notice</a> · <a href="apps.html">Our extensions</a></p>
 </div>
 
 <script>
